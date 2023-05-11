@@ -29,7 +29,7 @@ app.post('/', async (req,res) => {
         },
         headers: {
           Authorization: process.env.API_key,
-          'X-RapidAPI-Key': 'e289e9567emsh5a3ce99e3da0750p104616jsn46e9a53e3131',
+          'X-RapidAPI-Key': process.env.RapidAPI_key,
           'X-RapidAPI-Host': 'random-stuff-api.p.rapidapi.com'
         }
       };
