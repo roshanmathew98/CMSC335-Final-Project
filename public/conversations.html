@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
@@ -8,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatFreePT</title>
 </head>
-
 <body>
     <header>
         <h1>ChatFreePT</h1>
         <nav>
             <a href="/">AI Chat</a>
-            <!-- <a href="/jokes">Jokes</a>
-            <a href="/reddit">Reddit Memes</a> -->
+            <a href="/jokes">Jokes</a>
+            <a href="/reddit">Reddit Memes</a>
         </nav>
         <div class="dropdown hidden">
             <button class="dropbtn"></button>
@@ -36,41 +34,28 @@
             </div>
         </div>
     </header>
-    <main>
-
-        <div id="chat">
-            <div id="conversation"></div>
-            <form>
-                <input type="text" placeholder="Ask a question">
-                <button id="question" type="submit">Submit</button>
-            </form>
-        </div>
-        <div id="actions">
-            <button id="save">Save conversation</button>
-            <button id="clear">Clear</button>
-        </div>
-    </main>
+    <table id="list">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Conversation</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
     <div id="modal" class="hidden">
         <div id="modal-container">
-            <div id="modal-content">
-                <p>You must be logged in to use this feature.</p>
-                <div class="g_id_signin" id="login">
-                    <script src="https://accounts.google.com/gsi/client" async defer></script>
-                    <div id="g_id_onload"
-                        data-client_id="826494449820-7v6l5plandjqkehqnck80p7rghqt21io.apps.googleusercontent.com"
-                        data-login_uri="http://localhost:3000/" data-callback="handleCredentialResponse"
-                        data-auto_prompt="false">
-                    </div>
-                    <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
-                        data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
-                    </div>
+            <div id="modal-chat">
+                <div class="chat-item">
+
                 </div>
                 <button id="close-modal">Close</button>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
     <script src="header.js"></script>
+    <script src="conversations.js"></script>
 </body>
-
 </html>
