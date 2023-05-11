@@ -17,7 +17,7 @@ const saveChat = async () => {
         window.alert("You must ask a question before saving.")
         return
     }
-        
+    saveButton.textContent = "Saving..."
     try {
     const response = await fetch('/api/conversations', {
         method: 'POST',
@@ -29,7 +29,11 @@ const saveChat = async () => {
             "Content-Type": "application/json"
         }
     })
-    const data = await response.json()
+    window.alert("Conversation saved")
+    chatDiv.innerHTML = ""
+    questionArray.length = 0
+    saveButton.textContent = "Save conversation"
+
     } catch {
         console.log("error with saving data")
     }
