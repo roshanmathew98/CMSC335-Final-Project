@@ -1,5 +1,7 @@
 # ChatFreePT
 
+[Website Link](https://chatfreept.onrender.com/)
+
 
 ## Team Members
 
@@ -18,4 +20,5 @@ The app allows you to chat with an AI, sending questions and receiving responses
 
 ## YouTube Demo Video
 
-[Video]()
+[Video](https://youtu.be/W4M_Y9fwufc)
+
